@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="/">
+            <a class="navbar-brand fw-bold glow" href="/">
                 <i class="fas fa-heartbeat me-2"></i>Predictive Pulse
             </a>
         </div>
@@ -21,7 +21,7 @@
 
     <!-- Main Content -->
     <div class="container my-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center animate-fade">
             <div class="col-lg-8">
                 <div class="card shadow">
                     <div class="card-header bg-primary text-white">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-body p-4">
                         <form action="/predict" method="post" class="row g-3">
-                            <!-- Original form fields remain exactly the same -->
+                            <!-- All original form fields remain exactly the same -->
                             <!-- Gender -->
                             <div class="col-md-6">
                                 <label class="form-label">Gender</label>
@@ -127,10 +127,10 @@
 
                             <!-- Submit -->
                             <div class="col-12 text-center mt-4">
-                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 animate-pulse">
                                     <i class="fas fa-chart-line me-2"></i>Predict
                                 </button>
-                                <a href="/" class="btn btn-outline-secondary btn-lg px-5 ms-3">
+                                <a href="/" class="btn btn-outline-light btn-lg px-5 ms-3">
                                     <i class="fas fa-home me-2"></i>Cancel
                                 </a>
                             </div>
@@ -144,7 +144,7 @@
     <!-- Footer -->
     <footer class="footer py-4 mt-auto">
         <div class="container text-center">
-            <p class="mb-0 text-muted">&copy; 2023 Predictive Pulse. All rights reserved.</p>
+            <p class="mb-0">© 2023 Predictive Pulse. All rights reserved.</p>
         </div>
     </footer>
 
